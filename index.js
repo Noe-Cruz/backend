@@ -29,7 +29,7 @@ app.use(cors());
 app.use('/api',empleadoRouter)
 
 //habilitar el puerto 
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 10000
 const server = app.listen(port, () => {
     console.log('Escuchando en el puerto:'+port)
 })
