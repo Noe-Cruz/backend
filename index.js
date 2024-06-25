@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const empleado = require('./models/empleado')
+const createError = require('http-errors')
 
 //conexión con la BD
 mongoose
@@ -29,7 +30,7 @@ app.use(cors());
 app.use('/api',empleadoRouter)
 
 //habilitar el puerto 
-const port = process.env.PORT || 10000
+const port = process.env.PORT || 4000
 const server = app.listen(port, () => {
     console.log('Escuchando en el puerto:'+port)
 })
